@@ -4,9 +4,9 @@
  *
  * Minimal email sender using variables from a POST request.
  *
- * @author    Nicholas O'Donnell
- * @copyright Copyright (c) 2016 Nicholas O'Donnell
- * @link      http://nicholasodo.com
+ * @author    Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @link      http://picdorsey.com
  * @package   EasyEmail
  * @since     1.0.0
  */
@@ -43,7 +43,7 @@ class EasyEmailPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/nicholasodo/craft-easyemail/blob/master/README.md';
+        return 'https://github.com/picdorsey/craft-easyemail/blob/master/readme.md';
     }
 
     /**
@@ -51,7 +51,7 @@ class EasyEmailPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/nicholasodo/craft-easyemail/master/releases.json';
+        return 'https://raw.githubusercontent.com/picdorsey/craft-easyemail/master/releases.json';
     }
 
     /**
@@ -75,7 +75,7 @@ class EasyEmailPlugin extends BasePlugin
      */
     public function getDeveloper()
     {
-        return 'Nicholas O\'Donnell';
+        return 'Piccirilli Dorsey, Inc.';
     }
 
     /**
@@ -83,7 +83,7 @@ class EasyEmailPlugin extends BasePlugin
      */
     public function getDeveloperUrl()
     {
-        return 'http://nicholasodo.com';
+        return 'http://picdorsey.com';
     }
 
     /**

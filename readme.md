@@ -46,6 +46,6 @@ In both your email template and `subject` field, you have the ability to use any
 
 ## Installation
 1. Download & unzip the file and place the `easyemail` directory into your `craft/plugins` directory
-2.  -OR- do a `git@github.com:nicholasodo/craft-easyemail.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
+2.  -OR- do a `git@github.com:picdorsey/craft-easyemail.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 4. Install plugin in the Craft Control Panel under Settings > Plugins
 5. The plugin folder should be named `easyemail` for Craft to see it.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
