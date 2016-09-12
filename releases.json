@@ -4,7 +4,7 @@
         "downloadUrl": "https://github.com/picdorsey/craft-easyemail/archive/master.zip",
         "date": "2016-09-12T14:02:11-04:00",
         "notes": [
-            "[Added] Email templates vis mailgun."
+            "[Added] Email templates via mailgun."
         ]
     }
 ]
