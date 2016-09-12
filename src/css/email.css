@@ -90,6 +90,9 @@ body {
 .content-block {
   padding: 0 0 20px; }
 
+.button-block {
+  text-align: center; }
+
 .footer {
   width: 100%;
   clear: both;

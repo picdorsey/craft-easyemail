@@ -48,7 +48,7 @@
                     {% if action is defined and action is not null %}
                         <tr>
                             {% block actionBtn %}
-                                <td class="content-block" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+                                <td class="content-block button-block" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
                                     <a href="{{ action.url|default('#') }}" class="btn-primary" itemprop="url">{{ action.text|default('Go') }}</a>
                                 </td>
                             {% endblock %}

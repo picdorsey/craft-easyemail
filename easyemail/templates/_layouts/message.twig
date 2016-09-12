@@ -48,7 +48,7 @@
                     {% if action is defined and action is not null %}
                         <tr style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0;">
                             {% block actionBtn %}
-                                <td class="content-block" itemprop="handler" itemscope="" itemtype="http://schema.org/HttpActionHandler" style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0; padding: 0 0 20px; vertical-align: top;">
+                                <td class="content-block button-block" itemprop="handler" itemscope="" itemtype="http://schema.org/HttpActionHandler" style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0; padding: 0 0 20px; text-align: center; vertical-align: top;">
                                     <a href="{{ action.url|default('#') }}" class="btn-primary" itemprop="url" style="background-color: #2A9BD4; border: solid #2A9BD4; border-radius: 5px; border-width: 10px 20px; box-sizing: border-box; color: #FFF; cursor: pointer; display: inline-block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 2em; margin: 0; text-align: center; text-decoration: none; text-transform: capitalize;">{{ action.text|default('Go') }}</a>
                                 </td>
                             {% endblock %}
