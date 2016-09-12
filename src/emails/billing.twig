@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{ title|default(siteName ~ ' Receipt') }}</title>
+    <link href="./../css/email.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body itemscope itemtype="http://schema.org/EmailMessage">
+
+<table class="body-wrap">
+    <tr>
+        <td class="container" width="600">
+            <div class="content">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="header">
+                            {% block header %}
+                                <a href="{{ siteUrl }}">
+                                    <h1>{{ siteName }}</h1>
+                                </a>
+                            {% endblock %}
+                        </td>
+                    </tr>
+                </table>
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        {% block body %}
+                            <td class="content-wrap aligncenter">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="content-block">
+                                            <h1 class="aligncenter">${{ totalAmount|default(0) }} Paid</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="content-block">
+                                            <h2 class="aligncenter">Thank you for your purchase!</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="content-block aligncenter">
+                                            <table class="invoice">
+                                                <tr>
+                                                    <td>{{ heading|default('') }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                            {% for item in items %}
+                                                                <tr>
+                                                                    <td>{{ item.name }}</td>
+                                                                    <td class="alignright">${{ item.amount }}</td>
+                                                                </tr>
+                                                            {% endfor %}
+                                                            <tr class="total">
+                                                                <td class="alignright" width="80%">Total</td>
+                                                                <td class="alignright">${{ totalAmount|default(0) }}</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        {% endblock %}
+                    </tr>
+                </table>
+                <div class="footer">
+                    <table width="100%">
+                        <tr>
+                            <td class="aligncenter content-block">
+                                {% block footer %}
+                                    This message is from <a href="{{ siteUrl }}">{{ siteName }}</a>.
+                                {% endblock %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>

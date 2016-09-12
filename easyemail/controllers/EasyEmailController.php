@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   EasyEmail
- * @since     1.0.0
+ * @since     1.0.1
  */
 
 namespace Craft;

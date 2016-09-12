@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{ title|default(siteName ~ ' Message') }}</title>
+    <link href="./../css/email.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body itemscope itemtype="http://schema.org/EmailMessage">
+
+<table class="body-wrap">
+    <tr>
+        <td></td>
+        <td class="container" width="600">
+            <div class="content">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="header">
+                            {% block header %}
+                                <a href="{{ siteUrl }}">
+                                    <h1>{{ siteName }}</h1>
+                                </a>
+                            {% endblock %}
+                        </td>
+                    </tr>
+                </table>
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    {% if alert is defined and alert is not null %}
+                        <tr>
+                            <td class="alert alert-warning">
+                                {{ alert }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="content-wrap">
+                            <meta itemprop="name"/>
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="content-block">
+                                        {% block body %}
+
+                                        {% endblock %}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% if action is defined and action is not null %}
+                        <tr>
+                            {% block actionBtn %}
+                                <td class="content-block" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+                                    <a href="{{ action.url|default('#') }}" class="btn-primary" itemprop="url">{{ action.text|default('Go') }}</a>
+                                </td>
+                            {% endblock %}
+                        </tr>
+                    {% endif %}
+                </table>
+                <div class="footer">
+                    <table width="100%">
+                        <tr>
+                            <td class="aligncenter content-block">
+                                {% block footer %}
+                                    This message is from <a href="{{ siteUrl }}">{{ siteName }}</a>.
+                                {% endblock %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>

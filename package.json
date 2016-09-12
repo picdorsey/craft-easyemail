@@ -1,0 +1,20 @@
+{
+  "name": "easyemail",
+  "version": "1.0.1",
+  "license": "MIT",
+  "description": "Minimal email sender for Craft CMS using variables from a POST request.",
+  "author": "Piccirilli Dorsey, Inc.",
+  "repository": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && gulp --production"
+  },
+  "browser": {},
+  "dependencies": {
+    "flixir": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-inline-css": "^3.1.0"
+  }
+}

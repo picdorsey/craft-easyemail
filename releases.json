@@ -1,10 +1,10 @@
 [
     {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "downloadUrl": "https://github.com/picdorsey/craft-easyemail/archive/master.zip",
-        "date": "2016-08-16T13:53:17-04:00",
+        "date": "2016-09-12T14:02:11-04:00",
         "notes": [
-            "[Added] Initial release"
+            "[Added] Email templates vis mailgun."
         ]
     }
 ]
